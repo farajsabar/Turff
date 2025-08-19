@@ -1,264 +1,47 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0f1a;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #111;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  width: 40px;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.icons input {
-  padding: 5px 10px;
-}
-
-.hero {
-  position: relative;
-  padding: 60px 40px;
-  background: url('stadium.jpg') no-repeat center center/cover;
-  height: 100vh;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-.hero-text h5 {
-  color: red;
-  margin-bottom: 10px;
-}
-
-.hero-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-text p {
-  font-size: 16px;
-  color: #ccc;
-}
-
-.player-image {
-  position: absolute;
-  right: 50px;
-  top: 100px;
-  width: 400px;
-}
-
-.countdown {
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.countdown p {
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: red;
-}
-
-#timer {
-  display: flex;
-  gap: 15px;
-}
-
-#timer div {
-  text-align: center;
-}
-
-.sidebar {
-  position: absolute;
-  right: 0;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 15px;
-  margin: 5px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.news {
-  position: absolute;
-  right: 20px;
-  top: 200px;
-  width: 300px;
-}
-
-.news ul {
-  list-style: none;
-}
-
-.news li {
-  margin-bottom: 20px;
-}
-
-.news span {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.chat-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: red;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-}
-body {
-    background-color: #000;
-}
-.image {
-  background-color: #490D40;
-  background: url(https://sonorangirl.github.io/Earth-Quotes/img/google-earth-view-South-Iceland3.jpg) no-repeat center center;
-  background-size: cover;
-  height: 570px;
-  margin-top: -20px;
-}
-.image .heading {
-  color: white;
-  text-align: center;
-  padding-top: 200px;
-}
-.image p {
-  text-align: center;
-  padding: 20px 60px;
-}
-.image p .btn {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 10px;
-  font-size: 1.2em;
-}
-.image p .btn:hover {
-  color: #C57ED3;
-  border-color: #C57ED3;
-}
-
-.navbar {
-  height: 80px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  z-index: 100;
-  transition: background-color 1s ease 0s;
-}
-
-.navbar-default .navbar-brand {
-  margin-top: 10px;
-  color: white;
-}
-.navbar-default .navbar-brand:hover {
-  color: #C57ED3;
-  border: 1px solid #C57ED3;
-}
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  margin: 10px 5px 5px 5px;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
-  color: #C57ED3;
-  border: 1px solid #C57ED3;
-}
-.navbar-default .navbar-nav > li > a:visited {
-  color: #C57ED3;
-  text-decoration: none;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-  color: #C57ED3;
-}
-.navbar-default .navbar-toggle {
-  border-color: #C57ED3;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #490D40;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  color: #C57ED3;
-  background-color: #C57ED3;
-}
-.navbar-default .navbar-collapse.collapse.in ul {
-  background-color: #490D40;
-}
-
-/* Solid class attached on scroll past first section */
-.navbar.solid {
-  background-color: #490D40;
-  transition: background-color 1s ease 0s;
-  box-shadow: 0 0 4px grey;
-}
-.navbar.solid .navbar-brand {
-  color: #C57ED3;
-  transition: color 1s ease 0s;
-}
-.navbar.solid .navbar-nav > li > a {
-  color: #C57ED3;
-  transition: color 1s ease 0s;
-}
-
-.about {
-  background-color: #C57ED3;
-  color: #490D40;
-  height: 600px;
-  text-align: center;
-  margin-top: -20px;
-}
-.about h2 {
-  padding-top: 220px;
-}
-.about p {
-  padding: 20px 80px;
-}
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #172027;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader-container {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .loader-gif {
+            width: 180px;
+            height: auto;
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.25rem;
+        }
+        
+        .progress {
+            width: 200px;
+            height: 3px;
+            margin-top: 25px;
+            background-color: #172027;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            background-color: #8e8d8d;
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
