@@ -4,12 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.360</title>
-    <link href="/Turff/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Turff/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://codepen.io/kathykato/pen/57f0b5b76e6aa7e4917e08b81d378d7b.scss">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+    <style>
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #172027;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader-container {
+            text-align: center;
+            max-width: 200px;
+        }
+        
+        .loader-gif {
+            width: 180px;
+            height: auto;
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.25rem;
+        }
+        
+        .progress {
+            width: 200px;
+            height: 3px;
+            margin-top: 25px;
+            background-color: #172027;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            background-color: #8e8d8d;
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
 </head>
 <body>
-   
-    <div class="loading-screen">  <!-- Loading Screen -->
+    <!-- Loading Screen -->
+    <div class="loading-screen">
         <div class="loader-container">
             <img src="https://webstrot.com/html/sporteyz/assets/img/loader.gif" class="loader-gif" alt="Loading football animation">
             <!-- <p class="loading-text">Preparing the Pitch...</p> -->
@@ -21,12 +74,450 @@
     
     <!-- Your page content (hidden during loading) -->
     <div class="container-fluid p-0" id="main-content" style="display:none;">
-
-   
+        <!-- Your actual website content here -->
+         <div class="container-fluid p-0 mt-3">
+          <div class="container">
+    <div id="app">
+	<header class="header">
+    <div class="logo">
+        <img src="img/mr360logo.png" class="img-fluid"></div>
+    <div class="ham-menu" @click="changeVisibility()" :class="{ 'active': burgerVisibility }">
+      <span class="ham-menu__item"></span>
+		<span class="ham-menu__item"></span>
+		<span class="ham-menu__item"></span>
+    </div>
+    <nav class="header__nav-wrap" :class="{ 'open': burgerVisibility }">
+      <ul class="header__nav-list" @click="burgerVisibility = false">
+        <li class="header__nav-item"><a class="header__nav-link" href="#">Home</a></li>
+<li class="header__nav-item dropdown">
+  <a class="header__nav-link" href="#">Sports ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Cricket</a></li>
+    <li><a href="#">Football</a></li>
+    <li><a href="#">Pickleball</a></li>
+  </ul>
+</li>		
+	<li class="header__nav-item"><a class="header__nav-link" href="#">About us</a></li>
+			<li class="header__nav-item"><a class="header__nav-link" href="#">Contact us</a></li>
+            <button class="booknow">Book Now!!</button>
+      </ul>
+    </nav>
+  </header>
 </div>
-     <script src="/Turff/js/jquery.js"></script>
-     <script src="/Turff/js/bootstrap.min.js"></script>
-     <script src="/Turff/js/bootstrap.bundle.min.js"></script>
-     <script src="/Turff/script.js"></script>
+    </div>
+    </div>
+
+
+    <div class="container-fluid herosection">
+      <div class="container">
+        <main class="intro-section p-0">
+  <div class="container">
+    <div class="grid">
+      <div class="column-xs-12">
+        <ul class="slider">
+          <li class="slider-item active">
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title"><span class="underline">CRICKET</span></h1>
+                  </a>
+                </div>
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="img/cricket.jpg">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <div class="intro show-mobile">
+                      <a href="#">
+                        <h1 class="title"><span class="underline">CRICKET</span></h1>
+                      </a>
+                    </div>
+                    <p class="description">Lorem ipsum adipisicing elit. Natus similique voluptatem iure earum tenetur tempore hic tempora voluptates officia minus, modi dolorum molestiae omnis nobis veritatis!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title"><span class="underline">FOOTBALL</span></h1>
+                  </a>
+                </div>
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="img/football.jpg">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <div class="intro show-mobile">
+                      <a href="#">
+                        <h1 class="title"><span class="underline">FOOTBALL</span></h1>
+                      </a>
+                    </div>
+                    <p class="description">Lorem ipsum adipisicing elit. Modi, id, pariatur qui ipsa nesciunt iusto dolore impedit quam praesentium minima ipsum omnis officia aliquam debitis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slider-item">
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+                <div class="intro">
+                  <a href="#">
+                     <h1 class="title"><span class="underline">PICKLEBALL</span></h1>
+                  </a>
+                </div>
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="img/picleball.jpeg">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <div class="intro show-mobile">
+                      <a href="#">
+                        <h1 class="title"><span class="underline">PICKLEBALL</span></h1>
+                      </a>
+                    </div>
+                    <p class="description">Lorem ipsum dolor elit. Animi odit eius harum facilis possimus fugit, nostrum voluptatibus. Quaerat neque iure illum nulla recusandae consectetur? Nam?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="slider-item">
+            <div class="grid vertical">
+              <div class="column-xs-12 column-md-2 hide-mobile">
+                <div class="intro">
+                  <a href="#">
+                    <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
+                  </a>
+                </div>
+              </div>
+              <div class="column-xs-12 column-md-10">
+                <div class="image-holder">
+                  <img src="https://assets.codepen.io/1159990/hokkaido.jpg">
+                </div>
+                <div class="grid">
+                  <div class="column-xs-12 column-md-9">
+                    <div class="intro show-mobile">
+                      <a href="#">
+                        <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
+                      </a>
+                    </div>
+                    <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      <div class="grid">
+        <div class="column-xs-12">
+          <div class="controls">
+              <button class="previous">
+                <span class="visually-hidden">Previous</span>
+                <span class="icon arrow-left" aria-hidden="true"></span>
+              </a>
+              <button class="next">
+                <span class="visually-hidden">Next</span>
+                <span class="icon arrow-right" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+      </div>
+    </div>
+
+
+    <div class="container-fluid sports">
+      <div class="container">
+        <main>
+  <div class="info">
+    <span>Turf</span>
+    <h1>SPORTS</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Auffgdgdhsaadt commodi dignissimos quasi, facilis molestiae sint dolore nihil?</p>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--one">
+        <div>
+          <h2>CRICKET</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, excepturi dicta sequi quidem ipsum mollitia officiis tempore dolorem earum asperiores nesciunt veniam.</p>
+          <button class="readmore">Read More</button>
+        </div>
+      </div> 
+      <div class="swiper-slide swiper-slide--two">
+        <div>
+          <h2>FOOTBALL</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ullam, rerum labore qui adipisci laudantium atque deleniti ut alias dolorum? Quidem, eos delectus! Alias, dolor.</p>
+          <button class="readmore">Read More</button>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--three">
+
+        <div>
+          <h2>PICKLEBALL</h2>
+          <p>Lorem ipsum dolor sit, amet elit. Dolorem tenetur error fugit corrupti expedita voluptatum numquam accusamus necessitatibus. Neque tempora optio non aliquid voluptate recusandae!</p>
+          <button class="readmore">Read More</button>
+        </div>
+      </div>
+
+      <!-- <div class="swiper-slide swiper-slide--four">
+
+        <div>
+          <h2>Shark</h2>
+          <p>
+            Sharks are a group of elasmobranch fish characterized by a cartilaginous skeleton, five to seven gill slits on the sides of the head, and pectoral fins that are not fused to the head.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Shark" target="_blank">explore</a>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--five">
+
+        <div>
+          <h2>Dolphin</h2>
+          <p>
+            Dolphins are widespread. Most species prefer the warm waters of the tropic zones, but some, such as the right whale dolphin, prefer colder climates. Dolphins feed largely on fish and squid, but a few, such as the orca, feed on large mammals such as seals.
+          </p>
+          <a href="https://en.wikipedia.org/wiki/Dolphin" target="_blank">explore</a>
+        </div>
+      </div> -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <img src="https://www.shutterstock.com/image-vector/3d-wireframe-stadium-sport-arena-260nw-424913251.jpg" alt="" class="bg">
+  <img src="https://t3.ftcdn.net/jpg/05/84/01/72/360_F_584017233_8Ghxcmqzt7B845Pz2p4UodwPPEOTlKaO.jpg" alt="" class="bg2">
+  <img src="https://i.pinimg.com/1200x/99/9a/a5/999aa57578d864e451875154b61e7802.jpg" alt="" class="bg3">
+</main>
+      </div>
+    </div>
+  
+  
+    <div class="container-fluid about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="slider">
+                        <img src="img/soccor.jpg" alt="" class="img-fluid" id="slider-image">
+                        <img src="img/soccor.jpg" alt="" class="img-fluid" id="slider-image1">
+                    </div>
+                </div>
+                <div class="col-lg-7 offset-lg-1">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="total">
+                                <div class="heading">
+                                    <h2>About Us</h2>
+                                </div>
+                                <div class="content">
+                                    <p>Artificial Turf 360 Ground offers a durable, low-maintenance, and eco-friendly alternative to natural grass. Perfect for sports fields, playgrounds, and landscaping, our turf provides a lush, green appearance year-round. Enjoy consistent performance, excellent drainage, and a safe surface for all activities. Transform your outdoor space with Artificial Turf 360 Ground—where quality meets innovation.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <div class="features">
+                                    <ul>
+                                        <li>Professional 360° Turf Facility</li>
+                                        <li>Day & Night Game Booking</li>
+                                        <li>Cricket, Football & Box Cricket</li>
+                                        <li>Weekly Tournaments & Leagues</li>
+                                        <li>Advanced Lighting & Drainage</li>
+                                    </ul>
+                                </div>
+                                <div class="features d-none d-md-block">
+                                    <ul>
+                                        <li>Professional 360° Turf Facility</li>
+                                        <li>Day & Night Game Booking</li>
+                                        <li>Cricket, Football & Box Cricket</li>
+                                        <li>Weekly Tournaments & Leagues</li>
+                                        <li>Advanced Lighting & Drainage</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div>
+                                    <button class="booknow">
+                                        <a href="#">Book Now</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                    <div class="footer-left">
+                        <div class="footer-logo">
+                            <img src="img/mr360logo.png" alt="" class="footer">
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptas amet iste delectus voluptates, enim animi porro exercitationem. Dolor, at?</p>
+                        </div>
+                        <div>
+                            <button class="booknow">
+                                <a href="#">Book Now</a>
+                            </button>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="fi fi-brands-whatsapp"></i></i></a>
+                            <a href="#"><i class="fi fi-brands-instagram"></i></i></a>
+                            <a href="#"><i class="fi fi-brands-facebook"></i></i></a>
+                            <a href="#"><i class="fi fi-brands-twitter"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                    <div class="menu-section">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                   <div class="contact-section">
+                        <div class="title">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <div class="contact-info">
+                            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+                            <p><strong>Phone:</strong> +123 456 7890</p>
+                            <p><strong>Email:</strong>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid last-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright">
+                        <p>© 2025 Mr.360. All rights reserved | <a href="https://levlox.tech/">Designed by Levlox</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<script>
+        // Simulate loading progress
+        function simulateLoading() {
+            let progress = 0;
+            const bar = document.getElementById('loading-bar');
+            const interval = setInterval(() => {
+                progress += Math.random() * 10;
+                if (progress > 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    setTimeout(hideLoader, 200);
+                }
+                bar.style.width = progress + '%';
+            }, 200);
+        }
+        
+        function hideLoader() {
+            const loader = document.querySelector('.loading-screen');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 200);
+        }
+        
+        // Start loading simulation when page loads
+        window.addEventListener('load', simulateLoading);
+    </script>
+<script>
+    new Vue({
+  el: '#app',
+  data() {
+    return {
+      burgerVisibility: false
+    }
+  },
+  methods: {
+    changeVisibility() {
+      this.burgerVisibility = !this.burgerVisibility;
+    }
+  }
+})
+</script>
+<script>
+  /*
+inspiration
+https://dribbble.com/shots/4684682-Aquatic-Animals
+*/
+
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3,
+    slideShadows: true
+  },
+  keyboard: {
+    enabled: true
+  },
+  mousewheel: {
+    thresholdDelta: 70
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 1
+    },
+    1024: {
+      slidesPerView: 2
+    },
+    1560: {
+      slidesPerView: 3
+    }
+  }
+});
+</script>
 </body>
 </html>
