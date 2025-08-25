@@ -1504,6 +1504,26 @@ main > .info > a:hover {
     text-decoration: none;
     margin-right: 10px;
 }
+.footer-section .footer-social .instagram:hover {
+    color: #E1306C;
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+}
+.footer-section .footer-social .whatsapp:hover {
+    color: #25D366;
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+}
+.footer-section .footer-social .twitter:hover {
+    color: #1DA1F2;
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+}
+.footer-section .footer-social .facebook:hover {
+    color: #1877F2;
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+}
 .footer-section .footer-social a {
     text-decoration: none;
 }
@@ -1537,7 +1557,12 @@ main > .info > a:hover {
     color: #ffffff;
     padding-bottom: 5px;
     color: #FF0000;
-
+}
+.footer-section h3:hover {
+  color: #ffffff;
+  /* transition: ease-in 0.3s; */
+  /* transform: scale(1.05); */
+  border-bottom: #ff0000 2px solid;;
 }
 .footer-section .menu-section {
     padding: 30px 10px 10px 60px;
@@ -1552,8 +1577,12 @@ main > .info > a:hover {
 .footer-section .menu-section ul {
     list-style: none;
     line-height: 2.5;
-
 }
+.footer-section .menu-section a:hover {
+    color: #FF0000;
+    transition: ease-in 0.3s;
+    transform: scale(1.05);
+  }
 .footer-section .contact-section {
     padding: 30px 10px 10px 20px;
 }
@@ -1591,3 +1620,42 @@ main > .info > a:hover {
         padding-left: 0px;
     }
 }
+
+  .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(100%);
+            visibility: hidden;
+        }
+        .whatsapp-float.show {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            animation: float-up-down 2s ease-in-out infinite;
+        }
+        .whatsapp-float i { margin-top: 15px; }
+        @keyframes float-up-down {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        
