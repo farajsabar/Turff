@@ -1413,7 +1413,6 @@ main > .info > a:hover {
 }
 .about-section .booknow:hover {
     background: #000;
-    color: #ffff;
     border-color: #f2f2f2;
     transition: ease-in 0.3s;
     transform: scale(1.05);
@@ -1441,6 +1440,20 @@ main > .info > a:hover {
     .about-section .heading {
         margin-top: 40px;
     }
+}
+@media (max-width:350px) {
+    .about-section {
+        padding: 20px 20px 20px;
+    }
+    #slider-image1 {
+        border-radius: 20px;
+        right: -22px;
+        position: absolute;
+        bottom: -69px;
+        height: 216px;
+        margin: 8px;
+        border: 10px solid #ffffff;
+}
 }
 
 
