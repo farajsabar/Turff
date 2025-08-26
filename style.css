@@ -905,7 +905,13 @@ body {
   color: #e83f43;
 }
 
-.herosection img {
+@media (max-width: 576px) {
+ .hero_section {
+  margin-top: 50px;
+}
+
+}
+.hero_section img {
   width: 100%;
   object-fit: cover;
 }
