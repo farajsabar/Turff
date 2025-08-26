@@ -1451,10 +1451,11 @@ main > .info > a:hover {
         margin-top: 40px;
     }
 }
-@media (max-width:350px) {
+@media (max-width:576px) {
     .about-section {
         padding: 20px 20px 20px;
     }
+    
     #slider-image1 {
         border-radius: 20px;
         right: -22px;
@@ -1465,6 +1466,7 @@ main > .info > a:hover {
         border: 10px solid #ffffff;
 }
 }
+
 
 
 
