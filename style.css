@@ -1615,10 +1615,10 @@ main > .info > a:hover {
 .last-section {
     background-color: #121212;
     height: fit-content;
-    padding: 10px 20px;
+    padding: 0px 10px;
     color: #ffffff;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 .last-section a {
     font-size: 14px;
