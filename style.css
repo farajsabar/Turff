@@ -1414,7 +1414,7 @@ main > .info > a:hover {
             height: 100% !important;
         }
         
-        .match-panel {
+        .booking_section .match-panel {
             flex: 1;
             min-width: 300px;
             background: white;
@@ -1425,13 +1425,13 @@ main > .info > a:hover {
             flex-direction: column;
         }
         
-        h1 {
+       .booking_section h1 {
             font-size: 24px;
             color: #2c3e50;
             margin-bottom: 15px;
         }
         
-        h2 {
+       .booking_section h2 {
             font-size: 20px;
             color: #ffffff;
             margin-bottom: 15px;
@@ -1439,40 +1439,40 @@ main > .info > a:hover {
             border-bottom: 2px solid #eee;
         }
         
-        .description {
+       .booking_section .description {
             color: #7f8c8d;
             margin-bottom: 20px;
             font-size: 15px;
             line-height: 1.5;
         }
         
-        .features {
+       .booking_section .features {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin-bottom: 20px;
         }
         
-        .feature {
+       .booking_section .feature {
             display: flex;
             align-items: center;
             color: #34495e;
             font-size: 14px;
         }
         
-        .feature i {
+       .booking_section .feature i {
             margin-right: 8px;
             color: #3498db;
         }
         
-        .price {
+       .booking_section .price {
             font-size: 22px;
             font-weight: 700;
             color: #2c3e50;
             margin: 25px 0 15px;
         }
         
-        .date {
+       .booking_section .date {
             font-size: 18px;
             font-weight: 600;
             color: #2c3e50;
@@ -1481,14 +1481,14 @@ main > .info > a:hover {
             border-bottom: 1px solid #eee;
         }
         
-        .time-slots {
+       .booking_section .time-slots {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 25px;
             margin-bottom: 25px;
         }
         
-        .time-slot {
+       .booking_section .time-slot {
             background: #181818;
             border: 1px solid #e9ecef;
             border-radius: 8px;
@@ -1501,18 +1501,18 @@ main > .info > a:hover {
             color: #ffffff;
         }
         
-        .time-slot:hover {
+       .booking_section .time-slot:hover {
             background: #000000;
             border-color: #ffffff;
         }
         
-        .time-slot.selected {
+       .booking_section .time-slot.selected {
             background: #ffffff;
             color: #000000;
             border-color: #000000;
         }
         
-        .book-btn {
+       .booking_section .book-btn {
             background: red;
             color: white;
             border: none;
@@ -1525,12 +1525,12 @@ main > .info > a:hover {
             transition: background 0.3s;
         }
         
-        .book-btn:hover {
+       .booking_section .book-btn:hover {
             background: #ffffff;
             color: #000000;
         }
         
-        .countdown {
+       .booking_section .countdown {
             background: #000000;
             border-radius: 10px;
             padding: 20px;
@@ -1539,25 +1539,25 @@ main > .info > a:hover {
             margin-bottom: 25px;
         }
         
-        .countdown-title {
+       .booking_section .countdown-title {
             font-size: 18px;
             margin-bottom: 15px;
             font-weight: 600;
         }
         
-        .timer {
+       .booking_section .timer {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
         
-        .time-unit {
+       .booking_section .time-unit {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         
-        .time-value {
+       .booking_section .time-value {
             font-size: 32px;
             font-weight: 700;
             background: rgba(255, 255, 255, 0.2);
@@ -1570,20 +1570,20 @@ main > .info > a:hover {
             margin-bottom: 5px;
         }
         
-        .time-label {
+       .booking_section .time-label {
             font-size: 12px;
             text-transform: uppercase;
             opacity: 0.9;
         }
         
-        .match-teams {
+       .booking_section .match-teams {
             display: flex;
             justify-content: space-around;
             align-items: center;
             margin: 20px 0;
         }
         
-        .team {
+       .booking_section .team {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1591,7 +1591,7 @@ main > .info > a:hover {
             width: 40%;
         }
         
-        .team-logo {
+       .booking_section .team-logo {
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -1605,51 +1605,51 @@ main > .info > a:hover {
             color: #3498db;
         }
         
-        .team-name {
+       .booking_section .team-name {
             font-weight: 600;
             font-size: 16px;
             color: #2c3e50;
         }
         
-        .vs {
+       .booking_section .vs {
             font-size: 20px;
             font-weight: 700;
             color: #7f8c8d;
         }
         
-        .match-info {
+       .booking_section .match-info {
             background: #6fb5fb;
             border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
         }
         
-        .info-item {
+       .booking_section .info-item {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
         }
         
-        .info-item i {
+       .booking_section .info-item i {
             margin-right: 10px;
             color: #3498db;
             width: 20px;
         }
         
         @media (max-width: 768px) {
-            .time-slots {
+           .booking_section .time-slots {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .container {
+          .booking_section .container {
                 flex-direction: column;
             }
             
-            .timer {
+           .booking_section .timer {
                 gap: 8px;
             }
             
-            .time-value {
+           .booking_section .time-value {
                 font-size: 24px;
                 width: 50px;
                 height: 50px;
