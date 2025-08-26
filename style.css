@@ -1158,6 +1158,12 @@ main {
   column-gap: 3rem;
   padding-block: min(20vh, 3rem);
 }
+@media (max-width: 576px) {
+  main {
+    padding: 0;
+    min-height: auto;
+  }
+}
 
 .bg {
   position: fixed;
