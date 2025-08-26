@@ -988,6 +988,7 @@ button {
   justify-content: flex-end;
   padding: 0.25rem 0 0.25rem 0;
   bottom: 50px;
+  gap: 5px;
 }
 .controls .previous {
   border: 1px solid #232323;
@@ -996,6 +997,7 @@ button {
   border-top: 1px solid #232323;
   border-right: 1px solid #232323;
   border-bottom: 1px solid #232323;
+  border-left: 1px solid #232323;
 }
 .controls .icon {
   position: relative;
@@ -1144,6 +1146,9 @@ button {
   .controls {
     bottom: 10px;
   }
+  .controls .previous, .controls .next {
+    border-radius: 10px;
+  }
 }
 
 
@@ -1171,7 +1176,7 @@ button {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
 
 .sports {
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 main {
   position: relative;
@@ -1322,6 +1327,7 @@ main > .info > a:hover {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  margin-bottom: 15px;
 }
 
 .swiper-slide a {
@@ -1376,9 +1382,12 @@ main > .info > a:hover {
   margin-bottom: 14px;
 }
 .sports {
-  margin-top: 50px;
+  margin-top: 35px;
+  margin-bottom: 50px;
 }
-
+main > .info hr {
+  margin: 1.125rem 0 1rem 0;
+}
 }
 @media screen and (min-width: 48rem) {
   main {
@@ -1422,7 +1431,7 @@ main > .info > a:hover {
             border: 1px solid #b9b6b6;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            padding: 90px 25px 0px 25px;
+            padding: 40px 25px 0px 25px;
             height: 100% !important;
         }
         
@@ -1748,7 +1757,7 @@ main > .info > a:hover {
     padding: 8px;
     border: 1px solid red;
     border-radius: 8px;
-    width: 180px;
+    width: 150px;
     margin-top: 15px;
 }
 .about-section .booknow a {
