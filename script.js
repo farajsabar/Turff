@@ -61,7 +61,14 @@ navItem.addEventListener('click', toggleNavigation);
 
 
 
-
+        // WhatsApp button scroll functionality
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 200) {
+                $('.whatsapp-float').addClass('show');
+            } else {
+                $('.whatsapp-float').removeClass('show');
+            }
+        });
 
 
 
