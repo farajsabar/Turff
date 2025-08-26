@@ -1170,7 +1170,9 @@ button {
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
 
-
+.sports {
+  margin-bottom: 90px;
+}
 main {
   position: relative;
   width: calc(min(90rem, 90%));
@@ -1373,6 +1375,9 @@ main > .info > a:hover {
   line-height: 1.5;
   margin-bottom: 14px;
 }
+.sports {
+  margin-top: 50px;
+}
 
 }
 @media screen and (min-width: 48rem) {
@@ -1413,7 +1418,8 @@ main > .info > a:hover {
 .booking-panel {
             flex: 1;
             min-width: 300px;
-            background: white;
+            background: white transparent;
+            border: 1px solid #b9b6b6;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             padding: 90px 25px 0px 25px;
@@ -1423,7 +1429,8 @@ main > .info > a:hover {
         .booking_section .match-panel {
             flex: 1;
             min-width: 300px;
-            background: white;
+            background: white transparent;
+            border: 1px solid #b9b6b6;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             padding: 25px;
@@ -1439,7 +1446,6 @@ main > .info > a:hover {
         
        .booking_section h2 {
             font-size: 20px;
-            color: #ffffff;
             margin-bottom: 15px;
             padding-bottom: 10px;
             border-bottom: 2px solid #eee;
@@ -1508,7 +1514,6 @@ main > .info > a:hover {
         }
         
        .booking_section .time-slot:hover {
-            background: #000000;
             border-color: #ffffff;
         }
         
@@ -1537,7 +1542,6 @@ main > .info > a:hover {
         }
         
        .booking_section .countdown {
-            background: #000000;
             border-radius: 10px;
             padding: 20px;
             text-align: center;
@@ -1547,6 +1551,7 @@ main > .info > a:hover {
         
        .booking_section .countdown-title {
             font-size: 18px;
+            color: #000000;
             margin-bottom: 15px;
             font-weight: 600;
         }
@@ -1555,6 +1560,7 @@ main > .info > a:hover {
             display: flex;
             justify-content: center;
             gap: 15px;
+            color: #000000;
         }
         
        .booking_section .time-unit {
@@ -1587,6 +1593,9 @@ main > .info > a:hover {
             justify-content: space-around;
             align-items: center;
             margin: 20px 0;
+            border: 1px solid #e9ecef; border-radius: 10px;
+            padding: 10px;
+            background-color: #e7dfdf7a;
         }
         
        .booking_section .team {
@@ -1624,7 +1633,6 @@ main > .info > a:hover {
         }
         
        .booking_section .match-info {
-            background: #6fb5fb;
             border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
@@ -1640,6 +1648,14 @@ main > .info > a:hover {
             margin-right: 10px;
             color: #3498db;
             width: 20px;
+        }
+        @media (max-width: 576px) {
+          .booking-panel {
+            margin-bottom: 40px;
+          }
+          .match-panel {
+            margin-top: 40px;
+          }
         }
         
         @media (max-width: 768px) {
@@ -1721,7 +1737,7 @@ main > .info > a:hover {
 }
 .about-section {
     background-color: #ffffff transparent;
-    padding: 40px 100px 100px;
+    padding: 90px 100px 100px;
     /* background-image: url('/Turff/img/doing-sport-concept copy 2.jpg'); */
     
     
