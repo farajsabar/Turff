@@ -1,7 +1,13 @@
+html {
+  scroll-behavior: smooth !important;
+}
 .container {
   padding: 0;
   margin: 0;
   max-width: 100%;
+}
+p {
+  margin-bottom: 0;
 }
 
 * {
@@ -14,7 +20,7 @@ body {
 }
 .logo img {
     width: 100px;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     
 }
 
@@ -61,6 +67,11 @@ body {
   padding: 10px;
   margin: 0;
   z-index: 1000;
+}
+@media (max-width: 576px) {
+  .dropdown-menu {
+    left: -78px;
+  }
 }
 
 /* Dropdown items */
@@ -170,7 +181,7 @@ body {
     position: relative;
     overflow-x: hidden;
     overflow-y: auto;
-    padding-top: 30vh;
+    padding-top: 90px;
   }
 }
 @media screen and (min-width: 960px) {
@@ -272,7 +283,7 @@ body {
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    border: 2px solid #000;
+    border: 2px solid #005baa;
     cursor: pointer;
   }
 }
@@ -289,7 +300,7 @@ body {
     position: absolute;
     width: 30px;
     height: 4px;
-    background-color: #000;
+    background-color: #005baa;
     border-radius: 5px;
   }
 }
@@ -320,6 +331,11 @@ body {
   -webkit-transform: translateY(-10px) rotate(45deg);
   transform: translateY(-10px) rotate(45deg);
   background-color: #fff;
+}
+@media (max-width: 576px) {
+  .logo img {
+    width:80px;
+  }
 }
 
 
@@ -893,16 +909,7 @@ body {
   width: 100%;
   object-fit: cover;
 }
-@media (max-width:576px) {
-  .herosection img {
-    margin-top: 30px;
-  }
-}
-@media (min-width:576px) and (max-width:992px){
-  .herosection img {
-    margin-top: 30px;
-  }
-}
+
 
 .vertical {
   flex-direction: column;
@@ -1124,6 +1131,14 @@ button {
   white-space: nowrap;
   width: 1px;
 }
+@media (max-width: 576px) {
+  .hero-section img {
+    height: 160px !important;
+  }
+  .controls {
+    bottom: 10px;
+  }
+}
 
 
 
@@ -1156,7 +1171,13 @@ main {
   margin: 0 auto;
   min-height: 100vh;
   column-gap: 3rem;
-  padding-block: min(20vh, 3rem);
+  /* padding-block: min(20vh, 3rem); */
+}
+@media (max-width: 576px) {
+  main {
+    padding: 0;
+    min-height: auto;
+  }
 }
 
 .bg {
@@ -1179,10 +1200,11 @@ main {
 .bg3 {
   position: fixed;
   bottom: -8rem;
-  left: 0;
+  left: -58px;
   z-index: -1;
-  width: 330px;
-  opacity: 0.2;
+  width: 550px;
+  height: auto;
+  opacity: 0.1;
 }
 
 main > .info span {
@@ -1243,7 +1265,7 @@ main > .info > a {
 main > .info > a:hover {
   border: 0.125rem solid #005baa;
   color: #005baa;
-} */
+}
 
 .swiper {
   width: 100%;
@@ -1340,6 +1362,13 @@ main > .info > a:hover {
   background-image: none;
 }
 
+@media (max-width: 576px) {
+  main > .info p {
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+}
 @media screen and (min-width: 48rem) {
   main {
     display: flex;
@@ -1356,6 +1385,289 @@ main > .info > a:hover {
     width: 85%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.booking-panel {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 90px 25px 0px 25px;
+            height: 100% !important;
+        }
+        
+        .booking_section .match-panel {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+       .booking_section h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+       .booking_section h2 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+       .booking_section .description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+       .booking_section .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+       .booking_section .feature {
+            display: flex;
+            align-items: center;
+            color: #34495e;
+            font-size: 14px;
+        }
+        
+       .booking_section .feature i {
+            margin-right: 8px;
+            color: #3498db;
+        }
+        
+       .booking_section .price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 25px 0 15px;
+        }
+        
+       .booking_section .date {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 20px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+       .booking_section .time-slots {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        
+       .booking_section .time-slot {
+            background: #181818;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 12px 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        
+       .booking_section .time-slot:hover {
+            background: #000000;
+            border-color: #ffffff;
+        }
+        
+       .booking_section .time-slot.selected {
+            background: #ffffff;
+            color: #000000;
+            border-color: #000000;
+        }
+        
+       .booking_section .book-btn {
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+       .booking_section .book-btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+        
+       .booking_section .countdown {
+            background: #000000;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+       .booking_section .countdown-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+       .booking_section .timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+       .booking_section .time-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+       .booking_section .time-value {
+            font-size: 32px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+        
+       .booking_section .time-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        
+       .booking_section .match-teams {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+       .booking_section .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+        }
+        
+       .booking_section .team-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 2px solid #e9ecef;
+            font-size: 30px;
+            color: #3498db;
+        }
+        
+       .booking_section .team-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+       .booking_section .vs {
+            font-size: 20px;
+            font-weight: 700;
+            color: #7f8c8d;
+        }
+        
+       .booking_section .match-info {
+            background: #6fb5fb;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+       .booking_section .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+       .booking_section .info-item i {
+            margin-right: 10px;
+            color: #3498db;
+            width: 20px;
+        }
+        
+        @media (max-width: 768px) {
+           .booking_section .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+          .booking_section .container {
+                flex-direction: column;
+            }
+            
+           .booking_section .timer {
+                gap: 8px;
+            }
+            
+           .booking_section .time-value {
+                font-size: 24px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1427,6 +1739,9 @@ main > .info > a:hover {
     transition: ease-in 0.3s;
     transform: scale(1.05);
 }
+.about-section .content p {
+  margin-bottom: 20px !important;
+}
 #slider-image:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
@@ -1453,8 +1768,14 @@ main > .info > a:hover {
 }
 @media (max-width:576px) {
     .about-section {
-        padding: 20px 20px 20px;
+        padding: 90px 20px 20px;
     }
+    .swiper-slide {
+      height: 360px !important;
+    }
+    .swiper-pagination {
+    bottom: 0.25rem !important;
+}
     
     #slider-image1 {
         border-radius: 20px;
@@ -1609,16 +1930,29 @@ main > .info > a:hover {
 .last-section {
     background-color: #121212;
     height: fit-content;
-    padding: 10px 20px;
+    padding: 0px 20px;
     color: #ffffff;
     text-align: center;
     font-size: 14px;
+}
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 20px;
+  }
+  .last-section {
+    padding: 0px 10px;
+    font-size: 12px;
+  }
+  .footer-section .contact-section {
+    padding: 20px 10px 10px 20px;
+}
 }
 .last-section a {
     font-size: 14px;
     text-decoration: none;
     color: #FF0000;
 }
+
 .last-section a:hover {
     color: #ffffff;
     transition: ease-in 0.3s;
