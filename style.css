@@ -1200,10 +1200,11 @@ main {
 .bg3 {
   position: fixed;
   bottom: -8rem;
-  left: 0;
+  left: -58px;
   z-index: -1;
-  width: 330px;
-  opacity: 0.2;
+  width: 550px;
+  height: auto;
+  opacity: 0.1;
 }
 
 main > .info span {
@@ -1454,6 +1455,9 @@ main > .info > a:hover {
     border-color: #f2f2f2;
     transition: ease-in 0.3s;
     transform: scale(1.05);
+}
+.about-section .content p {
+  margin-bottom: 20px !important;
 }
 #slider-image:hover {
     transform: scale(1.05);
