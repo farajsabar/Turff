@@ -13,7 +13,29 @@ p {
 * {
   box-sizing: border-box;
 }
-
+.cursor {      /* Mouse Cursor*/
+  z-index: 1000;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s, width 0.3s, height 0.3s;
+  width: 10px;
+  height: 10px;
+  background-color: #1032cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cursor.active {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+.cursor.hidden {
+  opacity: 0 !important;
+}
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
