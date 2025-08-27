@@ -1009,7 +1009,6 @@ button {
   display: flex;
   justify-content: flex-end;
   padding: 0.25rem 0 0.25rem 0;
-  bottom: 50px;
   gap: 5px;
 }
 .controls .previous {
@@ -1221,6 +1220,8 @@ main {
   left: -12rem;
   z-index: -1;
   opacity: 0;
+  width: 100%;
+  height: 50%;
   object-fit: cover;
 }
 
@@ -1237,7 +1238,7 @@ main {
   bottom: -8rem;
   left: -58px;
   z-index: -1;
-  width: 550px;
+  width: 480px;
   height: auto;
   opacity: 0.1;
 }
@@ -1896,7 +1897,7 @@ main > .info hr {
     transform: scale(1.05);
 }
 .footer-section .footer-social .whatsapp:hover {
-    color: #25D366;
+    color: #11ab4a;
     transition: ease-in 0.3s;
     transform: scale(1.05);
 }
