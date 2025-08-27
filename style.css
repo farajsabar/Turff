@@ -36,6 +36,7 @@ p {
 .cursor.hidden {
   opacity: 0 !important;
 }
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -1410,6 +1411,15 @@ main > .info > a:hover {
 }
 main > .info hr {
   margin: 1.125rem 0 1rem 0;
+}
+.bg3 {
+    position: fixed;
+    left: -24px;
+    z-index: -1;
+    top: 425px;
+    width: 180px;
+    height: auto;
+    opacity: 0.2;
 }
 }
 @media screen and (min-width: 48rem) {
