@@ -928,10 +928,8 @@ body {
   color: #e83f43;
 }
 
-@media (max-width: 576px) {
  .hero_section {
   margin-top: 50px;
-}
 
 }
 .hero_section img {
@@ -1373,7 +1371,9 @@ button {
         font-size: 12px;
         letter-spacing: 0.6px;
       }
-
+      .sports-section .title {
+        font-size: 2em;
+        margin: 34px 0 34px 0;
     }
 
 
