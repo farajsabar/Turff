@@ -13,7 +13,9 @@ p {
 * {
   box-sizing: border-box;
 }
-.cursor {      /* Mouse Cursor*/
+
+/* Mouse Cursor*/
+.cursor {      
   z-index: 1000;
   pointer-events: none;
   position: absolute;
@@ -1700,24 +1702,29 @@ button {
   padding-top: 80px;
 }
 .turf-video-section {
+    background: url(/img/turf_video.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #e9e9e9;
     background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
+    padding: 150px 0;
     z-index: 1;
-    background: url(/Turff/img/cricket.jpg) center center / cover no-repeat fixed rgb(0, 0, 0);
-    background-position: center center;
-    padding: 150px 0px;
 }
 .turf-video-section::before {
     position: absolute;
+    background: rgb(17, 17, 17);
     z-index: -1;
     content: "";
     mix-blend-mode: multiply;
+    background-color: rgba(134, 0, 0, 0.93);
     opacity: 0.902;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.93);
 }
 .turf-video-section .video-section-inner {
     padding: 80px 0px;
@@ -1847,6 +1854,73 @@ button {
 
 
 
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 62%;
+    right: 298px;
+    transform: translateY(-50%);
+    width: 435px;
+    height: 244px;
+    background: url(https://themewant.com/products/html/kester/assets/images/about/shape1.png) no-repeat right center / contain;
+    opacity: 100%;
+    pointer-events: none;
+    z-index: 1;
+    max-width: 100%;
+}
+
+  .about-section {
+    position: relative;
+    overflow: visible;
+  }
+@media (min-width:768px) and (max-width:991.98px) {
+    .about-section::before {
+        content: "";
+        position: absolute;
+        top: 88%;
+        right: 273px;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 200px;
+        background: url(https://themewant.com/products/html/kester/assets/images/about/shape1.png) no-repeat right center / contain;
+        opacity: 100%;
+        pointer-events: none;
+        z-index: 1;
+        max-width: 100%;
+    }
+}
+@media (min-width:576px) and (max-width:767.98px) {
+    .about-section::before {
+        content: "";
+        position: absolute;
+        top: 76%;
+        right: 79px;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 200px;
+        background: url(https://themewant.com/products/html/kester/assets/images/about/shape1.png) no-repeat right center / contain;
+        opacity: 100%;
+        pointer-events: none;
+        z-index: 1;
+        max-width: 100%;
+    }
+}
+@media (max-width:576px){
+    .about-section::before {
+        content: "";
+        position: absolute;
+        top: 86%;
+        right: 9px;
+        transform: translateY(-50%);
+        width: 350px;
+        height: 200px;
+        background: url(https://themewant.com/products/html/kester/assets/images/about/shape1.png) no-repeat right center / contain;
+        opacity: 100%;
+        pointer-events: none;
+        z-index: 1;
+        max-width: 100%;
+    }
+}
 #slider-image {
     border-radius: 20px;
     position: relative;
@@ -1940,6 +2014,7 @@ button {
         border: 10px solid #ffffff;
 }
 }
+
 
 
 
