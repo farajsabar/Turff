@@ -391,7 +391,7 @@ body {
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
 
 
-.grid {
+/* .grid {
   display: flex;
   flex-direction: column;
   flex-flow: row wrap;
@@ -1171,7 +1171,7 @@ button {
   .controls .previous, .controls .next {
     border-radius: 10px;
   }
-}
+} */
 
 
 
