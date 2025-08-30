@@ -112,382 +112,15 @@
     </div>
     </div> -->
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
 
-        body {
-            overflow-x: hidden;
-            background: #f5f5f5;
-        }
-
-        /* Header and Navigation with Glass Effect */
-        header {
-            backdrop-filter: blur(10px); /* This creates the glass effect */
-            -webkit-backdrop-filter: blur(10px); /* For Safari */
-            padding: 15px 30px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-
-        header.scrolled {
-            /* background: rgba(26, 44, 95, 0.95); */
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            color: white;
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo i {
-            color: #ff5c00;
-            margin-right: 10px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            top: 10px;
-            position: relative;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: -2.9rem;
-            transition: color 0.3s;
-            padding: 8px 12px;
-            border-radius: 4px;
-            position: relative;
-        }
-
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #ff5c00;
-            left: 0;
-            bottom: 0;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #ff5c00;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            margin-top: 0;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
-        }
-
-        .content {
-            position: relative;
-            text-align: center;
-            color: white;
-            max-width: 800px;
-            padding: 0 20px;
-            z-index: 1;
-            margin-top: 60px;
-        }
-
-        .content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .book-now-btn {
-            background: #ff5c00;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            margin-left: 15px;
-            top: -9px;
-        }
-
-        .book-now-btn:hover {
-            background: #ff7b33;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 92, 0, 0.4);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #ff5c00;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .btn:hover:before {
-            left: 100%;
-        }
-
-        .btn:hover {
-            background: #ff7b33;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .indicators {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            z-index: 2;
-        }
-
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            margin: 0 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .indicator.active {
-            background: white;
-            transform: scale(1.2);
-        }
-
-        /* Responsive Styles */
-
-        @media (max-width: 992px) {
-            .nav-links {
-                position: fixed;
-                height: 100vh;
-                width: 100%;
-                flex-direction: column;
-                clip-path: circle(0px at 90% -10%);
-                -webkit-clip-path: circle(0px at 90% -10%);
-                background: rgba(26, 44, 95, 0.95);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                transition: all 0.8s ease-out;
-                top: 70px;
-                left: 0;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-            }
-
-            .nav-links.active {
-                clip-path: circle(1500px at 90% -10%);
-                -webkit-clip-path: circle(1500px at 90% -10%);
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-
-            .nav-links a {
-                font-size: 1.5rem;
-                padding: 15px 25px;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .content h1 {
-                font-size: 2.8rem;
-            }
-              .book-now-btn {
-                margin-left: 0;
-                padding: 15px 30px;
-                font-size: 1.2rem;
-            }
-        }
-        @media (max-width: 968px) {
-            .nav-links {
-                position: fixed;
-                height: 100vh;
-                width: 100%;
-                flex-direction: column;
-                clip-path: circle(0px at 90% -10%);
-                -webkit-clip-path: circle(0px at 90% -10%);
-                background: rgba(26, 44, 95, 0.95);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                transition: all 0.8s ease-out;
-                top: 70px;
-                left: 0;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-            }
-
-            .nav-links.active {
-                clip-path: circle(1500px at 90% -10%);
-                -webkit-clip-path: circle(1500px at 90% -10%);
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-
-            .nav-links a {
-                font-size: 1.5rem;
-                padding: 15px 25px;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .content h1 {
-                font-size: 2.8rem;
-            }
-              .book-now-btn {
-                margin-left: 0;
-                padding: 15px 30px;
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .content h1 {
-                font-size: 2.2rem;
-            }
-            
-            .content p {
-                font-size: 1rem;
-            }
-            
-            .logo {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content h1 {
-                font-size: 1.8rem;
-            }
-            
-            .btn {
-                padding: 10px 25px;
-            }
-            
-            header {
-                padding: 15px 20px;
-            }
-             .book-now-btn {
-                padding: 12px 25px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header with Transparent Blur Navigation -->
     <header id="header">
         <nav class="navbar">
             <div class="logo">
-                <i class="fas fa-basketball-ball"></i>
-                <span>SportZone</span>
+                <img src="/img/mr360logo.png" alt="">
+                <span style="font-size: x-large;">MR.360</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
@@ -506,38 +139,38 @@
     <!-- Hero Section -->
     <section class="hero">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('/img/close-up-athlete-playing-soccer.jpg');">
+        <div class="slide active" style="background-image: url('/img/close-up-athlete-playing-soccer.jpg'); object-fit: cover;">
             <div class="content">
                 <h1>Experience The Thrill</h1>
                 <p>Join thousands of athletes pushing their limits and achieving greatness in every game</p>
-                <a href="#" class="btn">Watch Live</a>
+                <a href="#" class="btn">Book Now</a>
             </div>
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('/img/football.jpg');">
+        <div class="slide" style="background-image: url('/img/football.jpg'); object-fit: cover;">
             <div class="content">
                 <h1>Train Like A Champion</h1>
                 <p>Access professional training programs and elevate your performance to the next level</p>
-                <a href="#" class="btn">Get Started</a>
+                <a href="#" class="btn">Book Now</a>
             </div>
         </div>
         
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('/img/turf_video.jpg');">
+        <div class="slide" style="background-image: url('/img/cricket-equipment-digital-art.jpg'); object-fit: cover;">
             <div class="content">
                 <h1>Join The Community</h1>
                 <p>Connect with sports enthusiasts from around the world and share your passion</p>
-                <a href="#" class="btn">Sign Up Now</a>
+                <a href="#" class="btn">Book Now</a>
             </div>
         </div>
         
         <!-- Slide 4 -->
-        <div class="slide" style="background-image: url('/img/soccer-players-action-professional-stadium.jpg');">
+        <div class="slide" style="background-image: url('/img/soccer-players-action-professional-stadium.jpg'); object-fit: cover;">
             <div class="content">
                 <h1>Latest Sports Gear</h1>
                 <p>Discover the newest equipment and apparel designed for peak performance</p>
-                <a href="#" class="btn">Shop Now</a>
+                <a href="#" class="btn">Book Now</a>
             </div>
         </div>
         
@@ -630,61 +263,56 @@
         });
     </script>
 
-    <div class="container-fluid sports-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="title">Sports category</h2>
-          <div class="sports-gallery">
-    <div class="card">
-      <div class="image-container">
-        <img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Football in stadium">
-        <div class="overlay">
-          <span class="category">Football</span>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam dignissimos incidunt magni nostrum, laboriosam aliquid voluptatum quisquam, sequi est reprehenderit, eveniet quasi autem modi commodi.</h2>
-          <!-- <div class="meta">
-            <div><i class="far fa-clock"></i> 2 days ago</div>
-            <div><i class="far fa-eye"></i> 4.5K views</div>
-          </div> -->
-          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+ <div class="container">
+        <h1>Image Gallery with Hover Effect</h1>
+        
+        <div class="gallery">
+            <div class="image-wrapper">
+                <img src="/img/soccor.jpg" alt="Mountain Landscape">
+                <div class="caption">
+                    <h3>Mountain View</h3>
+                    <p>Beautiful mountain landscape at sunrise</p>
+                </div>
+            </div>
+            
+            <div class="image-wrapper center">
+                <img src="/img/soccor.jpg" alt="Forest Landscape">
+                <div class="caption">
+                    <h3>Forest Path</h3>
+                    <p>Serene forest path with lush greenery</p>
+                </div>
+            </div>
+            
+            <div class="image-wrapper">
+                <img src="/img/soccor.jpg" alt="Lake Landscape">
+                <div class="caption">
+                    <h3>Lake Reflection</h3>
+                    <p>Calm lake with perfect mountain reflection</p>
+                </div>
+            </div>
         </div>
-      </div>
+        
+       
     </div>
-    
-    <div class="card">
-      <div class="image-container">
-        <img src="https://cricinformer.com/wp-content/uploads/2023/07/cover-virat-kohli.png" alt="Player kicking ball" >
-        <div class="overlay">
-          <span class="category">Cricket</span>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nesciunt libero vel, dolorem deleniti modi eligendi quibusdam consequuntur architecto, sit doloremque perspiciatis officia! Animi, eligendi.</h2>
-          <!-- <div class="meta">
-            <div><i class="far fa-clock"></i> 5 hours ago</div>
-            <div><i class="far fa-eye"></i> 8.2K views</div>
-          </div> -->
-          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      </div>
-    
-    <div class="card">
-      <div class="image-container">
-        <img src="https://rackonnect.com/wp-content/uploads/2024/11/DSC_7153_JR.webp" class="img-fluid" alt="Goalkeeper save">
-        <div class="overlay">
-          <span class="category">Pickleball</span>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloribus eius cumque blanditiis alias, quia ab consectetur, cum pariatur, libero voluptas nobis? Provident, ipsum necessitatibus!</h2>
-          <!-- <div class="meta">
-            <div><i class="far fa-clock"></i> 1 week ago</div>
-            <div><i class="far fa-eye"></i> 6.7K views</div>
-          </div> -->
-          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-    </div>
+
+
+    <script>
+        // Add some interactive effects with JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageWrappers = document.querySelectorAll('.image-wrapper');
+            
+            imageWrappers.forEach(wrapper => {
+                // Add click event to make the effect persistent on mobile
+                wrapper.addEventListener('click', function() {
+                    // Remove active class from all wrappers
+                    imageWrappers.forEach(w => w.classList.remove('active'));
+                    
+                    // Add active class to clicked wrapper
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
 
     <div class="container-fluid booking_section">
        <div class="container">
