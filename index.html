@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.360</title>
-    <link rel="icon" type="image/png" href="Turff/img/mr360logo.png">
+    <link rel="icon" type="image/png" href="/Turff/img/mr360logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://codepen.io/kathykato/pen/57f0b5b76e6aa7e4917e08b81d378d7b.scss">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
-    <link rel="stylesheet" type="text/css" href="/Turff/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/Turff/css/all.min.css"> -->
     <link rel="stylesheet" type="text/css" href="/Turff/css/main.css">
     <link rel="stylesheet" type="text/css" href="/Turff/css/bootstrap.min.css">
      <link rel="icon" type="image/png" href="img/mr360logo.png">
@@ -26,55 +26,7 @@
      <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="/Turff/style.css" rel="stylesheet">
-    <style>
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #172027;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loader-container {
-            text-align: center;
-            max-width: 200px;
-        }
-        
-        .loader-gif {
-            width: 180px;
-            height: auto;
-        }
-        
-        .loading-text {
-            margin-top: 20px;
-            font-weight: 600;
-            color: #333;
-            font-size: 1.25rem;
-        }
-        
-        .progress {
-            width: 200px;
-            height: 3px;
-            margin-top: 25px;
-            background-color: #172027;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            background-color: #8e8d8d;
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -117,6 +69,7 @@
             top: 0;
             z-index: 1000;
             transition: background 0.3s ease;
+            padding: 0;
         }
 
         header.scrolled {
@@ -197,6 +150,10 @@
             height: 100vh;
             overflow: hidden;
             margin-top: 0;
+        }
+
+        .hero h1 {
+            color: #ffffff;
         }
 
         .slide {
@@ -454,8 +411,7 @@
             }
         }
     </style>
-</head>
-<body>
+
     <!-- Header with Transparent Blur Navigation -->
     <header id="header">
         <nav class="navbar">
@@ -603,7 +559,7 @@
         });
     </script>
 
-     <div class="rts-gallery-section">
+     <div class="rts-gallery_section">
         <div class="container">
             <div class="gallery-area">
                 <div class="gallery-item text-center">
@@ -873,7 +829,7 @@
     </div>
 
 
-    <div class="container-fluid gallery_section p-0 mt-5 mb-5">
+    <div class="container-fluid gallery_section p-0">
       <div class="container">
 <style>
 .gallery {
@@ -1000,19 +956,20 @@
             </div>
         </div>
     </div>
-
-  <a href="https://wa.me/9962945293" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-  </a>
+    
+    <a href="https://wa.me/9962945293" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
 
    <!-- WhatsApp Float Button -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-<script src="Turff/script.js"></script>
+<script src="/Turff/script.js"></script>
 
-    <script>
+<script>
         (function ($) {
 	"use strict";
 
@@ -1022,8 +979,8 @@
 	});
 
 })(jQuery);
-     </script>
-     <script>
+</script>
+<script>
         (function ($) {
             "use strict";
          $(document).ready(function () {
@@ -1033,7 +990,7 @@
              });
          });
         })(jQuery);
-     </script>
+</script>
 
 <script>
         // Simulate loading progress
@@ -1206,5 +1163,6 @@ var swiper = new Swiper(".swiper", {
             }
         });
 </script>
+
 </body>
 </html>

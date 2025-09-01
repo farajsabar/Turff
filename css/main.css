@@ -13344,7 +13344,7 @@ tr:first-child {
 }
 .rts-gallery-section .container .gallery-area .gallery-item .contents-wrapper .contents .author-info .content .read-more:hover::before {
   width: 100%;
-  background: var(--theme-color);
+  background: red;
 }
 .rts-gallery-section.inner {
   padding-top: 70px;
