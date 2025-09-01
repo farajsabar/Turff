@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.360</title>
-    <link rel="icon" type="image/png" href="img/mr360logo.png">
+    <link rel="icon" type="image/png" href="Turff/img/mr360logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://codepen.io/kathykato/pen/57f0b5b76e6aa7e4917e08b81d378d7b.scss">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+    <link rel="stylesheet" type="text/css" href="/Turff/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/Turff/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/Turff/css/bootstrap.min.css">
+    <link href="/Turff/style.css" rel="stylesheet">
     <style>
         .loading-screen {
             position: fixed;
@@ -80,54 +84,381 @@
     <!--Cursor-->
     <div class="cursor d-none d-sm-none d-md-block d-lg-block"></div>      
 
-    <!-- <div class="container-fluid p-0 mt-3">
-          <div class="container">
-    <div id="app">
-	<header class="header">
-    <div class="logo">
-        <img src="img/mr360logo.png" class="img-fluid"></div>
-    <div class="ham-menu" @click="changeVisibility()" :class="{ 'active': burgerVisibility }">
-      <span class="ham-menu__item"></span>
-		<span class="ham-menu__item"></span>
-		<span class="ham-menu__item"></span>
-    </div>
-    <nav class="header__nav-wrap" :class="{ 'open': burgerVisibility }">
-      <ul class="header__nav-list" @click="burgerVisibility = false">
-        <li class="header__nav-item"><a class="header__nav-link" href="#">Home</a></li>
-<li class="header__nav-item dropdown">
-  <a class="header__nav-link" href="#">Sports ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="#">Cricket</a></li>
-    <li><a href="#">Football</a></li>
-    <li><a href="#">Pickleball</a></li>
-  </ul>
-</li>		
-	<li class="header__nav-item"><a class="header__nav-link" href="#">About us</a></li>
-			<li class="header__nav-item"><a class="header__nav-link" href="#">Contact us</a></li>
-           <li class="header__nav-item"> <button class="booknow">Book Now!!</button></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-    </div>
-    </div> -->
 
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #f5f5f5;
+        }
+
+        /* Header and Navigation with Glass Effect */
+        header {
+            backdrop-filter: blur(10px); /* This creates the glass effect */
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled {
+            /* background: rgba(26, 44, 95, 0.95); */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* max-width: 1200px; */
+            margin: 0 10px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            top: 10px;
+            position: relative;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: -2.9rem;
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: red;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: red;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+        }
+
+        .hero .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 1;
+            margin-top: 60px;
+        }
+
+        .hero .content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .book-now-btn {
+            background: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            top: -9px;
+        }
+
+        .book-now-btn:hover {
+            background: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(71, 71, 70, 0.4);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: #ff7b33;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            z-index: 2;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        /* Responsive Styles */
+
+        @media (max-width: 992px) {
+            .nav-links {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                clip-path: circle(0px at 90% -10%);
+                -webkit-clip-path: circle(0px at 90% -10%);
+                background: #000000;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                transition: all 0.8s ease-out;
+                top: 70px;
+                left: 0;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .nav-links.active {
+                clip-path: circle(1500px at 90% -10%);
+                -webkit-clip-path: circle(1500px at 90% -10%);
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                padding: 15px 25px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .content h1 {
+                font-size: 2.8rem;
+            }
+              .book-now-btn {
+                margin-left: 0;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 968px) {
+            .nav-links {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                flex-direction: column;
+                clip-path: circle(0px at 90% -10%);
+                -webkit-clip-path: circle(0px at 90% -10%);
+                background: #000000;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                transition: all 0.8s ease-out;
+                top: 70px;
+                left: 0;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .nav-links.active {
+                clip-path: circle(1500px at 90% -10%);
+                -webkit-clip-path: circle(1500px at 90% -10%);
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                padding: 15px 25px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .content h1 {
+                font-size: 2.8rem;
+            }
+              .book-now-btn {
+                margin-left: 0;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .content p {
+                font-size: 1rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+            }
+            
+             .book-now-btn {
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header with Transparent Blur Navigation -->
     <header id="header">
         <nav class="navbar">
             <div class="logo">
-                <img src="/img/mr360logo.png" alt="">
-                <span style="font-size: x-large;">MR.360</span>
+              <img src="Turff/img/mr360logo.png" alt="">
             </div>
             <ul class="nav-links">
                 <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-list"></i> Category</a></li>
                 <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="#"><i class="fas fa-phone"></i> Contact Us</a></li>
-                <li><a href="#" class="book-now-btn"><i class="fas fa-ticket-alt"></i> Book Now</a></li>
+                <li><a href="#" class="book-now-btn"><i class="fas fa-ticket-alt me-1 pt-1"></i>  Book Now</a></li>
 
             </ul>
             <button class="hamburger" id="hamburger">
@@ -139,38 +470,38 @@
     <!-- Hero Section -->
     <section class="hero">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('/img/close-up-athlete-playing-soccer.jpg'); object-fit: cover;">
+        <div class="slide active" style="background-image: url('Turff/img/close-up-athlete-playing-soccer.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Experience The Thrill</h1>
                 <p>Join thousands of athletes pushing their limits and achieving greatness in every game</p>
-                <a href="#" class="btn">Book Now</a>
+                <a href="#" class="btn">Watch Live</a>
             </div>
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('/img/football.jpg'); object-fit: cover;">
+        <div class="slide" style="background-image: url('Turff/img/football.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Train Like A Champion</h1>
                 <p>Access professional training programs and elevate your performance to the next level</p>
-                <a href="#" class="btn">Book Now</a>
+                <a href="#" class="btn">Get Started</a>
             </div>
         </div>
         
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('/img/cricket-equipment-digital-art.jpg'); object-fit: cover;">
+        <div class="slide" style="background-image: url('Turff/img/turf_video.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Join The Community</h1>
                 <p>Connect with sports enthusiasts from around the world and share your passion</p>
-                <a href="#" class="btn">Book Now</a>
+                <a href="#" class="btn">Sign Up Now</a>
             </div>
         </div>
         
         <!-- Slide 4 -->
-        <div class="slide" style="background-image: url('/img/soccer-players-action-professional-stadium.jpg'); object-fit: cover;">
+        <div class="slide" style="background-image: url('Turff/img/soccer-players-action-professional-stadium.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Latest Sports Gear</h1>
                 <p>Discover the newest equipment and apparel designed for peak performance</p>
-                <a href="#" class="btn">Book Now</a>
+                <a href="#" class="btn">Shop Now</a>
             </div>
         </div>
         
@@ -263,56 +594,63 @@
         });
     </script>
 
- <div class="container">
-        <h1>Image Gallery with Hover Effect</h1>
-        
-        <div class="gallery">
-            <div class="image-wrapper">
-                <img src="/img/soccor.jpg" alt="Mountain Landscape">
-                <div class="caption">
-                    <h3>Mountain View</h3>
-                    <p>Beautiful mountain landscape at sunrise</p>
+     <div class="rts-gallery-section">
+        <div class="container">
+            <div class="gallery-area">
+                <div class="gallery-item text-center">
+                    <a href="#0" class="gallery-picture"><img src="/Turff/img/img8.jpg" alt=""></a>
+                    <a href="#0" class="gallery-picture1"><img src="/Turff/img/img8-small.jpg" alt=""></a>
+                    <div class="contents-wrapper">
+                        <div class="contents text-start">
+                            <div class="d-block">
+                                <p class="tag">FOOTBALL</p>
+                                <a href="blog-details.html" class="gallery-title">THE WORLD CUP – WHAT TO EXPECT FROM</a>
+                            </div>
+                            <div class="author-info">
+                                <div class="content">
+                                    <a href="blog-details.html" class="read-more">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="image-wrapper center">
-                <img src="/img/soccor.jpg" alt="Forest Landscape">
-                <div class="caption">
-                    <h3>Forest Path</h3>
-                    <p>Serene forest path with lush greenery</p>
+                <div class="gallery-item text-center active mid">
+                    <a href="#0" class="gallery-picture"><img src="/Turff/img/img9.jpg" alt=""></a>
+                    <a href="#0" class="gallery-picture1"><img src="/Turff/img/img9-small.jpg" alt=""></a>
+                    <div class="contents-wrapper">
+                        <div class="contents text-start">
+                            <div class="d-block">
+                                <p class="tag">FOOTBALL</p>
+                                <a href="blog-details.html" class="gallery-title">THE WORLD CUP – WHAT TO EXPECT FROM</a>
+                            </div>
+                            <div class="author-info">
+                                <div class="content">
+                                    <a href="blog-details.html" class="read-more">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="image-wrapper">
-                <img src="/img/soccor.jpg" alt="Lake Landscape">
-                <div class="caption">
-                    <h3>Lake Reflection</h3>
-                    <p>Calm lake with perfect mountain reflection</p>
+                <div class="gallery-item text-center">
+                    <a href="#0" class="gallery-picture"><img src="/Turff/img/img10.jpg" alt=""></a>
+                    <a href="#0" class="gallery-picture1"><img src="/Turff/img/img10-small.jpg" alt=""></a>
+                    <div class="contents-wrapper">
+                        <div class="contents text-start">
+                            <div class="d-block">
+                                <p class="tag">FOOTBALL</p>
+                                <a href="blog-details.html" class="gallery-title">THE WORLD CUP – WHAT TO EXPECT FROM</a>
+                            </div>
+                            <div class="author-info">
+                                <div class="content">
+                                    <a href="blog-details.html" class="read-more">READ MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
-       
     </div>
-
-
-    <script>
-        // Add some interactive effects with JavaScript
-        document.addEventListener('DOMContentLoaded', function() {
-            const imageWrappers = document.querySelectorAll('.image-wrapper');
-            
-            imageWrappers.forEach(wrapper => {
-                // Add click event to make the effect persistent on mobile
-                wrapper.addEventListener('click', function() {
-                    // Remove active class from all wrappers
-                    imageWrappers.forEach(w => w.classList.remove('active'));
-                    
-                    // Add active class to clicked wrapper
-                    this.classList.add('active');
-                });
-            });
-        });
-    </script>
 
     <div class="container-fluid booking_section">
        <div class="container">
@@ -640,10 +978,33 @@
 
    <!-- WhatsApp Float Button -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
+<script src="Turff/script.js"></script>
+
+    <script>
+        (function ($) {
+	"use strict";
+
+	$('.gallery-area .gallery-item').hover(function () {
+		$('.gallery-area .gallery-item.active').removeClass('active');
+		$(this).addClass('active');
+	});
+
+})(jQuery);
+     </script>
+     <script>
+        (function ($) {
+            "use strict";
+         $(document).ready(function () {
+             $('.gallery-area .gallery-item').hover(function () {
+                 $('.gallery-area .gallery-item.active').removeClass('active');
+                 $(this).addClass('active');
+             });
+         });
+        })(jQuery);
+     </script>
 
 <script>
         // Simulate loading progress
