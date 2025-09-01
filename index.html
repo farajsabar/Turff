@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr.360</title>
-    <link rel="icon" type="image/png" href="Turff/img/mr360logo.png">
+    <link rel="icon" type="image/png" href="/Turff/img/mr360logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://codepen.io/kathykato/pen/57f0b5b76e6aa7e4917e08b81d378d7b.scss">
@@ -13,59 +13,11 @@
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
-    <link rel="stylesheet" type="text/css" href="/Turff/css/all.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/Turff/css/all.min.css"> -->
     <link rel="stylesheet" type="text/css" href="/Turff/css/main.css">
     <link rel="stylesheet" type="text/css" href="/Turff/css/bootstrap.min.css">
     <link href="/Turff/style.css" rel="stylesheet">
-    <style>
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #172027;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        .loader-container {
-            text-align: center;
-            max-width: 200px;
-        }
-        
-        .loader-gif {
-            width: 180px;
-            height: auto;
-        }
-        
-        .loading-text {
-            margin-top: 20px;
-            font-weight: 600;
-            color: #333;
-            font-size: 1.25rem;
-        }
-        
-        .progress {
-            width: 200px;
-            height: 3px;
-            margin-top: 25px;
-            background-color: #172027;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            background-color: #8e8d8d;
-            height: 100%;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -108,6 +60,7 @@
             top: 0;
             z-index: 1000;
             transition: background 0.3s ease;
+            padding: 0;
         }
 
         header.scrolled {
@@ -190,6 +143,10 @@
             margin-top: 0;
         }
 
+        .hero h1 {
+            color: #ffffff;
+        }
+
         .slide {
             position: absolute;
             top: 0;
@@ -253,7 +210,7 @@
             display: flex;
             align-items: center;
             margin-left: 15px;
-            top: -9px;
+            top: 0px;
         }
 
         .book-now-btn:hover {
@@ -445,13 +402,12 @@
             }
         }
     </style>
-</head>
-<body>
+
     <!-- Header with Transparent Blur Navigation -->
     <header id="header">
         <nav class="navbar">
             <div class="logo">
-              <img src="Turff/img/mr360logo.png" alt="">
+              <img src="/Turff/img/mr360logo.png" alt="">
             </div>
             <ul class="nav-links">
                 <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
@@ -470,7 +426,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('Turff/img/close-up-athlete-playing-soccer.jpg'); object-fit: cover; width: 100%; height: 100%;">
+        <div class="slide active" style="background-image: url('/Turff/img/close-up-athlete-playing-soccer.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Experience The Thrill</h1>
                 <p>Join thousands of athletes pushing their limits and achieving greatness in every game</p>
@@ -479,7 +435,7 @@
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide" style="background-image: url('Turff/img/football.jpg'); object-fit: cover; width: 100%; height: 100%;">
+        <div class="slide" style="background-image: url('/Turff/img/football.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Train Like A Champion</h1>
                 <p>Access professional training programs and elevate your performance to the next level</p>
@@ -488,7 +444,7 @@
         </div>
         
         <!-- Slide 3 -->
-        <div class="slide" style="background-image: url('Turff/img/turf_video.jpg'); object-fit: cover; width: 100%; height: 100%;">
+        <div class="slide" style="background-image: url('/Turff/img/turf_video.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Join The Community</h1>
                 <p>Connect with sports enthusiasts from around the world and share your passion</p>
@@ -497,7 +453,7 @@
         </div>
         
         <!-- Slide 4 -->
-        <div class="slide" style="background-image: url('Turff/img/soccer-players-action-professional-stadium.jpg'); object-fit: cover; width: 100%; height: 100%;">
+        <div class="slide" style="background-image: url('/Turff/img/soccer-players-action-professional-stadium.jpg'); object-fit: cover; width: 100%; height: 100%;">
             <div class="content">
                 <h1>Latest Sports Gear</h1>
                 <p>Discover the newest equipment and apparel designed for peak performance</p>
@@ -864,7 +820,7 @@
     </div>
 
 
-    <div class="container-fluid gallery_section p-0">
+    <div class="container-fluid gallery-section mt-5 p-0">
       <div class="container">
 <div class="gallery">
 <div><img src="/Turff/img/cricket.jpg" alt></div>
@@ -971,19 +927,20 @@
             </div>
         </div>
     </div>
-
-  <a href="https://wa.me/9962945293" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-  </a>
+    
+    <a href="https://wa.me/9962945293" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
 
    <!-- WhatsApp Float Button -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-<script src="Turff/script.js"></script>
+<script src="/Turff/script.js"></script>
 
-    <script>
+<script>
         (function ($) {
 	"use strict";
 
@@ -993,8 +950,8 @@
 	});
 
 })(jQuery);
-     </script>
-     <script>
+</script>
+<script>
         (function ($) {
             "use strict";
          $(document).ready(function () {
@@ -1004,7 +961,7 @@
              });
          });
         })(jQuery);
-     </script>
+</script>
 
 <script>
         // Simulate loading progress
@@ -1177,5 +1134,6 @@ var swiper = new Swiper(".swiper", {
             }
         });
 </script>
+
 </body>
 </html>
