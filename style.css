@@ -1849,6 +1849,7 @@ body {
             .nav-links.active {
                 clip-path: circle(1500px at 90% -10%);
                 -webkit-clip-path: circle(1500px at 90% -10%);
+                top: 105px;
             }
 
             .nav-links li {
@@ -1895,6 +1896,7 @@ body {
             .nav-links.active {
                 clip-path: circle(1500px at 90% -10%);
                 -webkit-clip-path: circle(1500px at 90% -10%);
+                top: 105px;
             }
 
             .nav-links li {
@@ -1933,6 +1935,10 @@ body {
                 font-size: 1.5rem;
             }
         }
+            .nav-links.active {
+              top: 105px;
+            }
+
 
         @media (max-width: 480px) {
             .content h1 {
@@ -1948,5 +1954,8 @@ body {
             }
              .book-now-btn {
                 padding: 12px 25px;
+            }
+            .nav-links.active {
+              top: 90px;
             }
         }
