@@ -33,6 +33,9 @@ p {
             z-index: 9999;
             transition: opacity 0.5s ease;
         }
+        .loading-screen .loading-text {
+          color: #ffffff;
+        } 
         
         .loader-container {
             text-align: center;
@@ -441,8 +444,16 @@ body {
 
 .rts-gallery-section {
   margin: 5px 0 90px 0;
+  padding: 0;
 }
-
+.rts-gallery-section .container {
+  padding: 175px 0;
+}
+.rts-gallery-section .title-gallery {
+  padding: 50px 0;
+  text-align: center;
+  font-weight: 700;
+}
 .rts-gallery-section .gallery-title, .read-more {
   text-decoration: none;
 }
