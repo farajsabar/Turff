@@ -94,7 +94,7 @@ p {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif !important;
 }
 .logo img {
     width: 90px;
@@ -1173,7 +1173,7 @@ body {
 
 
 
-.gallery-section .gallery { 
+.photos-section .photos { 
   font-size: 0;
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
@@ -1182,22 +1182,22 @@ body {
   flex-flow: row wrap; 
   display: -webkit-box;
   display: flex;
-  padding: 0;
-  gap: 0;
+  padding: 0 !important;
+  gap: 0 !important;
 }
-.gallery-section .gallery div { 
+.photos-section .photos div { 
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto; 
   width: 200px; 
 }
-.gallery div img { 
+.photos div img { 
   width: 100%; 
   height: auto; 
 }
 @media screen and (max-width: 400px) {
-  .gallery div { margin: 0; }
-  .gallery { padding: 0; }
+  .photos div { margin: 0; }
+  .photos { padding: 0; }
   
 }
 
